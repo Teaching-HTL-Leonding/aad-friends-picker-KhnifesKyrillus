@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   aadClientId: '9857936b-6703-4954-84b2-86436c460365',
   aadTenantId: '91fc072c-edef-4f97-bdc5-cfb67718ae3a',
+  customApi: 'http://localhost:5001/api/friends',
 };
 
 /*

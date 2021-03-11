@@ -1,9 +1,17 @@
 .search {
-    height: 260px;
+    height: 250px;
     width: 95%;
     margin: auto;
     text-align: left;
   }
+
+.friendslist {
+    height: 100px;
+    width: 95%;
+    margin: auto;
+    text-align: left;
+  }
+
 
 .title{
 

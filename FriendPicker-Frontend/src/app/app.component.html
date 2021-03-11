@@ -1,32 +1,45 @@
 <html>
-  <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet"
-  />
-
   <div class="title">
     <h1>Friend Picker</h1>
   </div>
 
-  <button (click)="login()" [hidden]="loggedState">Login</button>
-
-  <div *ngIf="loggedState" class="user">
-    <p>Name: {{ profile?.displayName }}</p>
+  <div class="logout">
+    <button (click)="login()" [hidden]="loggedState">Login</button>
   </div>
-
-  <div class="search">
-    <h3>Search</h3>
-    <input type="text" [(ngModel)]="userNameFilter" />
-    <button mat-stroked-button (click)="getUsers()">Search</button>
-
-    <div>
-      <ul>
-        <li *ngFor="let u of users" class="searchResult">
-          {{ u.displayName }}
-        </li>
-      </ul>
+ 
+  <div *ngIf="loggedState">
+    <div  class="user">
+      <p>Logged in as: {{ profile?.displayName }}</p>
+    </div>
+  
+    <div class="search">
+      <h3>Search</h3>
+      <input type="text" [(ngModel)]="userNameFilter" />
+      <button mat-stroked-button (click)="getUsers()">Search</button>
+  
+      <div>
+        <ul>
+          <li *ngFor="let u of users" class="searchResult">
+            <button (click)="addFriend(u!)" *ngIf="!isFriend(u!)">Add</button>
+            {{ u.displayName }} ({{ u.userPrincipalName }})
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="friendslist">
+      <h3>My Friends</h3>
+      <div>
+        <ul>
+          <li *ngFor="let u of friends">
+            <button (click)="removeFriend(u!)">❌</button>
+            {{ u?.displayName }} ({{ u?.userPrincipalName }})
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
+  
 
   <div class="logout">
     <button mat-stroked-button (click)="logout()" [hidden]="!loggedState">
