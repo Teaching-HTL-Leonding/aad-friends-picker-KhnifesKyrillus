@@ -1,0 +1,37 @@
+.search {
+    height: 250px;
+    width: 95%;
+    margin: auto;
+    text-align: left;
+  }
+
+.friendslist {
+    height: 100px;
+    width: 95%;
+    margin: auto;
+    text-align: left;
+  }
+
+
+.title{
+
+    margin: auto;
+    text-align: center;
+}
+
+.logout{
+    margin: auto;
+    text-align: center;
+}
+
+.searchResult{
+    margin: auto;
+    text-align: left;
+}
+
+.user{
+    width: 95%;
+    margin: auto;
+    text-align: left;
+    height: 50px;
+}
