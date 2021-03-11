@@ -1,0 +1,35 @@
+<html>
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+
+  <div class="title">
+    <h1>Friend Picker</h1>
+  </div>
+
+  <button (click)="login()" [hidden]="loggedState">Login</button>
+
+  <div *ngIf="loggedState" class="user">
+    <p>Name: {{ profile?.displayName }}</p>
+  </div>
+
+  <div class="search">
+    <input type="text" [(ngModel)]="userNameFilter" />
+    <button mat-stroked-button (click)="getUsers()">Search</button>
+
+    <div>
+      <ul>
+        <li *ngFor="let u of users" class="searchResult">
+          {{ u.displayName }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="logout">
+    <button mat-stroked-button (click)="logout()" [hidden]="!loggedState">
+      Logout
+    </button>
+  </div>
+</html>
