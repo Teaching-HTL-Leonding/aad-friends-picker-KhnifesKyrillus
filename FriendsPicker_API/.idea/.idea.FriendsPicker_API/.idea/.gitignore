@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.FriendsPicker_API.iml
+# Datasource local storage ignored files
+/../../../../../../../../../:\Users\khnif\Desktop\aad-friends-picker-KhnifesKyrillus\FriendsPicker_API\.idea\.idea.FriendsPicker_API\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
